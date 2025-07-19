@@ -65,8 +65,7 @@ const Ticker: React.FC = () => {
     <div className="flex flex-col items-center justify-center bg-gray-900 px-2 py-1 select-none">
         <div className="w-full max-w-4xl mx-auto p-2 md:p-3 bg-gray-800/50 rounded-xl shadow-xl border border-cyan-400/20 backdrop-blur-sm">
             <header className="text-center mb-6">
-                <h1 className="text-xl md:text-3xl font-light text-cyan-300 tracking-wider">Global Progress Index</h1>
-                <p className="text-xs md:text-base text-gray-400 mt-1">Continuously updating based on a fixed universal rate.</p>
+                <h1 className="text-xl md:text-3xl font-light text-cyan-300 tracking-wider">Total gasoline saved for clients</h1>
             </header>
             <main>
                 <TickerDisplay value={currentValue} />
