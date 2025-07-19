@@ -1,0 +1,40 @@
+    /* For custom scrollbar and font */
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Work+Sans:wght@300;400&display=swap');
+    body {
+      font-family: 'Work Sans', sans-serif;
+      scrollbar-width: thin;
+      scrollbar-color: #4f46e5 #111827;
+    }
+    body::-webkit-scrollbar {
+      width: 8px;
+    }
+    body::-webkit-scrollbar-track {
+      background: #111827;
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: #4f46e5;
+      border-radius: 20px;
+      border: 3px solid #111827;
+    }
+    .font-display {
+      font-family: 'Syne', sans-serif;
+    }
+    .glass-morphism {
+      background: rgba(17, 24, 39, 0.6); /* Darker for dark theme */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .animate-fade-in-up {
+      animation: fade-in-up 0.5s ease-out forwards;
+    }
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }

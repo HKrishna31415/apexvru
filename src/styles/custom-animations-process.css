@@ -1,0 +1,137 @@
+/* Custom Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+@keyframes pulse-light {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+}
+.animate-pulse-light {
+  animation: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animate-grow {
+  animation: grow 1s ease-out forwards;
+}
+
+/* Custom animation delay property */
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Animations from BenefitIcons */
+.shield-pulse { animation: pulse-light 2.5s ease-in-out infinite; transform-origin: center; }
+.check-draw { stroke-dasharray: 24; stroke-dashoffset: 24; animation: draw 2s ease-out forwards; animation-delay: 0.5s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+.safety-pulse { animation: pulse-light 2s infinite; }
+
+.gear-spin { animation: spin 4s linear infinite; transform-origin: center; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.arrows-spin { animation: spin 4s linear infinite; transform-origin: center; }
+
+.wave1 { animation: flow 2s linear infinite; }
+.wave2 { animation: flow 2.5s linear infinite; animation-delay: 0.5s; }
+
+.arrow-up1 { animation: arrow-up 1.5s ease-out infinite; opacity: 0; }
+.arrow-up2 { animation: arrow-up 1.5s ease-out infinite; opacity: 0; animation-delay: 0.2s; }
+.arrow-up3 { animation: arrow-up 1.5s ease-out infinite; opacity: 0; animation-delay: 0.4s; }
+@keyframes arrow-up {
+  0% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* New Profitability Icon Animations */
+@keyframes float-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+.animate-float-up {
+  animation: float-up 2s ease-out infinite alternate;
+}
+
+@keyframes scroll-line {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-scroll-line {
+  stroke-dasharray: 100;
+  animation: scroll-line 2s ease-out forwards;
+}
+
+@keyframes pulse-dollar {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+.profit-dollar-pulse {
+  transform-origin: center;
+  animation: pulse-dollar 2.5s ease-in-out infinite;
+}
+
+
+/* New background for features section */
+.features-background {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #0284c7, #1e293b);
+  background-size: 400% 400%;
+  animation: gradient-shimmer 15s ease infinite;
+}
+@keyframes gradient-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

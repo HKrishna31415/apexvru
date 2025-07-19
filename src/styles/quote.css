@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+@keyframes liquid-morph {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: rotate(0deg);
+        opacity: 0.9;
+    }
+    50% {
+        border-radius: 30% 70% 50% 50% / 50% 60% 30% 70%;
+        transform: rotate(180deg) scale(1.05);
+        opacity: 1;
+    }
+}
+.animate-liquid-morph {
+    animation: liquid-morph 20s ease-in-out infinite;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+.particle {
+    position: absolute;
+    bottom: -20px;
+    background-color: rgba(200, 220, 255, 0.25);
+    border-radius: 50%;
+    pointer-events: none;
+    animation-name: float-up;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
