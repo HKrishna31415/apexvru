@@ -10,34 +10,34 @@ const timelineData: {
   color: TimelineColor;
 }[] = [
   {
-    year: "2015",
-    title: "APEX Energy Founded",
-    description: "Our journey begins with a mission to identify and eliminate waste in the energy sector.",
-    color: "purple",
-  },
-  {
     year: "2017",
-    title: "First-Gen VRU Deployed",
+    title: "First Gen VRU",
     description: "Successfully launched our first Vapor Recovery Unit, setting a new benchmark for efficiency.",
     color: "indigo",
   },
   {
-    year: "2019",
-    title: "Launch of IoT-Enabled Monitoring",
-    description: "Integrated smart IoT sensors into our systems for real-time performance tracking and optimization.",
-    color: "blue",
-  },
-  {
     year: "2021",
-    title: "Expansion into International Markets",
+    title: "Preliminary Testing of R&D Product in Brazil",
     description: "Began deploying solutions globally, helping international partners meet stricter environmental standards.",
     color: "teal",
   },
   {
-    year: "2023",
-    title: "Next-Gen Compact VRU Unveiled",
+    year: "2024",
+    title: "First Commercial Sales and Certification for Beta Product",
     description: "Introduced a smaller, more powerful, and more cost-effective VRU for a wider range of applications.",
     color: "fuchsia",
+  },
+  {
+    year: "2025",
+    title: "Founding of the Company",
+    description: "Our journey begins with a mission to identify and eliminate waste in the energy sector.",
+    color: "purple",
+  },
+  {
+    year: "2026",
+    title: "Anticipated Release of New Product",
+    description: "Integrated smart IoT sensors into our systems for real-time performance tracking and optimization.",
+    color: "blue",
   },
 ];
 

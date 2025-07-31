@@ -25,6 +25,7 @@ import Legal from './pages/Legal';
 import Pledge from './pages/Pledge';
 import GetAQuote from './pages/GetAQuote';
 import KnowledgeBase from './pages/KnowledgeBase';
+import ClimateSolution from './pages/news/ClimateSolution';
 import HomeHero from './components/Landing/HomeHero';
 import VRUFlow from './components/Landing/VRUFlow';
 import Ticker from './components/Landing/Ticker';
@@ -79,6 +80,7 @@ function App() {
         <Route path="/Pledge" element={<Layout><Pledge /></Layout>} />
         <Route path="/quote" element={<Layout><GetAQuote /></Layout>} />
         <Route path="/knowledge" element={<Layout><KnowledgeBase /></Layout>} />
+        <Route path="/news/climate-solution" element={<Layout><ClimateSolution /></Layout>} />
       </Routes>
     </Router>
   );

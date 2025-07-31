@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
             <div className="space-y-4">
               <p><strong className="text-gray-300">Address:</strong> 123 Energy Lane, Houston, TX 77001</p>
               <p><strong className="text-gray-300">Phone:</strong> (123) 456-7890</p>
-              <p><strong className="text-gray-300">Email:</strong> contact@apexenergy.com</p>
+              <p><strong className="text-gray-300">Email:</strong> contact@apexvru.com</p>
             </div>
             <div className="mt-8">
               <div className="aspect-w-16 aspect-h-9 bg-gray-800 rounded-lg overflow-hidden">

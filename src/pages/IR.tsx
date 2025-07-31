@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { DocumentType, Document, TeamMember, NewsArticle } from '../types';
+import { DocumentType, Document, NewsArticle } from '../types';
+import { leadershipTeam, advisors } from '../data/leadershipData';
 import DocumentLink from '../ui/DocumentLink';
 import { DownloadIcon, ExternalLinkIcon } from '../ui/IR-Icons';
 import ThreeScene from '../components/ThreeScene';
@@ -12,17 +13,10 @@ const documents: Document[] = [
   { id: 'd4', type: DocumentType.Financials, title: 'Q3 Financial Statements', date: 'Oct 05, 2024', version: 'q3-audited' },
 ];
 
-const team: TeamMember[] = [
-    { id: 't1', name: 'Eleanor Vance', title: 'Founder & CEO', bio: 'Pioneering vapor recovery technology with over 15 years of experience in the energy sector.', imageUrl: 'https://picsum.photos/id/237/400/400' },
-    { id: 't2', name: 'Marcus Thorne', title: 'Chief Technology Officer', bio: 'Lead architect of our proprietary capture system and a visionary in sustainable engineering.', imageUrl: 'https://picsum.photos/id/238/400/400' },
-    { id: 't3', name: 'Isabella Chen', title: 'Chief Financial Officer', bio: 'Expert in scaling high-growth startups and managing capital for strategic expansion.', imageUrl: 'https://picsum.photos/id/239/400/400' },
-    { id: 't4', name: 'Javier Rios', title: 'VP of Operations', bio: 'Streamlining deployment and operations to ensure maximum efficiency and client satisfaction.', imageUrl: 'https://picsum.photos/id/240/400/400' },
-];
+
 
 const news: NewsArticle[] = [
-    { id: 'n1', title: 'APEX Energy Secures $25M Series A Funding to Expand Vapor Recovery Tech', source: 'TechCrunch', date: 'Oct 22, 2024', url: '#', excerpt: 'The funding round, led by Future Ventures, will accelerate the deployment of APEX’s innovative solutions across North America.' },
-    { id: 'n2', title: 'How APEX Energy is Turning a Climate Problem into a Market Solution', source: 'Bloomberg Green', date: 'Oct 10, 2024', url: '#', excerpt: 'An in-depth look at the technology and business model that positions APEX at the forefront of the sustainable energy transition.' },
-    { id: 'n3', title: 'CEO Eleanor Vance Named a "Top 30 Under 30" in Energy', source: 'Forbes', date: 'Sep 15, 2024', url: '#', excerpt: 'Our founder and CEO is recognized for her leadership and groundbreaking work in combating industrial emissions.' },
+    { id: 'n2', title: 'How APEX Energy is Turning a Climate Problem into a Market Solution', source: 'Internal', date: 'August 1st, 2025', url: '/news/climate-solution', excerpt: 'An in-depth look at the technology and business model that positions APEX at the forefront of the sustainable energy transition.' },
 ];
 
 const StatCard: React.FC<{ title: string; value: string; }> = ({ title, value }) => (
@@ -87,15 +81,40 @@ const InvestorRelations: React.FC = () => {
               Driven by a team of industry veterans and innovators committed to sustainable growth.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map(member => (
-              <div key={member.id} className="text-center">
-                <img className="mx-auto h-32 w-32 rounded-full object-cover border-2 border-brand-gray-800" src={member.imageUrl} alt={member.name} />
-                <h3 className="mt-6 text-lg font-semibold text-white">{member.name}</h3>
-                <p className="text-brand-blue-400">{member.title}</p>
-                <p className="mt-2 text-sm text-brand-gray-400">{member.bio}</p>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            {leadershipTeam.map((person) => (
+              <div 
+                key={person.id} 
+                className={`bg-brand-gray-800/50 p-6 rounded-lg border border-brand-gray-700/50 transition-all duration-300 hover:scale-105 cursor-pointer ${person.hoverClasses}`}
+              >
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className={`font-display text-2xl font-bold ${person.textClass}`}>{person.name}</h3>
+                    <p className="text-brand-blue-300 text-sm font-medium">{person.title}</p>
+                  </div>
+                </div>
+                <p className="mt-4 text-brand-gray-400">{person.shortDescription}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Advisors */}
+      <section className="py-16 sm:py-24 bg-brand-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-8">Strategic Advisors</h2>
+            <div className="flex justify-center space-x-8">
+              {advisors.map((advisor) => (
+                <div key={advisor.id} className="text-center group">
+                  <div className="w-24 h-24 bg-brand-gray-700/50 border-2 border-brand-gray-600 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 group-hover:border-brand-blue-500 group-hover:scale-110">
+                    <span className="font-bold text-3xl text-brand-gray-500 group-hover:text-brand-blue-400 transition-colors duration-300">{advisor.name.split(' ').map(n => n[0]).join('')}</span>
+                  </div>
+                  <p className="mt-3 text-sm font-medium text-brand-gray-400">{advisor.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

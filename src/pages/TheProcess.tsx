@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { HeroAnimation } from './../components/Benefits/HeroAnimation';
 import { FeatureCard } from './../components/Benefits/FeatureCard';
-import Modal from '../components/Modal';
+import Modal from './../components/Modal';
 import {
   Zap,
   Cpu,

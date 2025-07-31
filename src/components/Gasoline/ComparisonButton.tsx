@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CheckIcon, XIcon } from './gasoline-constants';
 import ElectricButton from './ElectricButton';
 
+
 const FeatureItem: React.FC<{ icon: React.ReactNode; title: React.ReactNode; description: string }> = ({ icon, title, description }) => (
     <li className="flex items-start space-x-4">
         <div className="flex-shrink-0 mt-1">{icon}</div>
@@ -113,6 +114,7 @@ const Comparison: React.FC = () => {
                             Upgrade
                         </ElectricButton>
                     </div>
+
                 </div>
             </div>
 
